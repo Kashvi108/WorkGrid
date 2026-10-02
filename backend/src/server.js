@@ -11,20 +11,13 @@ const server = http.createServer(app);
 // ✅ Setup Socket.io
 const io = require('socket.io')(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     methods: ['GET', 'POST'],
     credentials: true
   }
 });
 
-// const redisAdapter = require('@socket.io/redis-adapter');
-// const pubClient = redis;
-// const subClient = pubClient.duplicate();
-// await subClient.connect();
-// io.adapter(redisAdapter(pubClient, subClient));
 
-
-// ✅ Make io available to controllers (for emitting from REST endpoints)
 app.set('io', io);
 
 // ✅ Setup socket handlers
