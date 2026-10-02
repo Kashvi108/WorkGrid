@@ -1,0 +1,14 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500&f[]=space-mono@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: auto;
+}
+
+body {
+  @apply bg-background text-white font-body overflow-x-hidden;
+}
